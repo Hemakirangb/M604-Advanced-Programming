@@ -1,0 +1,609 @@
+{
+	"info": {
+		"_postman_id": "b4bd49b7-7cc1-449e-9430-9f95135125b6",
+		"name": "Job_application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "53798887",
+		"_collection_link": "https://tamiltam0007-7405618.postman.co/workspace/tam-teaches's-Workspace~243cd027-c253-4ec2-8f78-868058460a97/collection/53798887-b4bd49b7-7cc1-449e-9430-9f95135125b6?action=share&source=collection_link&creator=53798887"
+	},
+	"item": [
+		{
+			"name": "Job_Application",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jobs"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Job_Application",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/jobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"jobs"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Apr 2026 21:02:52 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"company\": \"Google\",\n        \"position\": \"Software Engineer\",\n        \"status\": \"INTERVIEW\",\n        \"appliedDate\": \"2024-01-15\",\n        \"notes\": \"Phone screen done\",\n        \"salaryRange\": \"$120k-$160k\",\n        \"location\": \"Remote\"\n    },\n    {\n        \"id\": 2,\n        \"company\": \"Amazon\",\n        \"position\": \"Backend Developer\",\n        \"status\": \"APPLIED\",\n        \"appliedDate\": \"2024-01-20\",\n        \"notes\": \"Awaiting response\",\n        \"salaryRange\": \"$110k-$150k\",\n        \"location\": \"Seattle\"\n    },\n    {\n        \"id\": 3,\n        \"company\": \"Microsoft\",\n        \"position\": \"Java Developer\",\n        \"status\": \"OFFER\",\n        \"appliedDate\": \"2024-01-10\",\n        \"notes\": \"Offer received!\",\n        \"salaryRange\": \"$130k-$170k\",\n        \"location\": \"Redmond\"\n    },\n    {\n        \"id\": 4,\n        \"company\": \"Netflix\",\n        \"position\": \"Senior Software Engineer\",\n        \"status\": \"REJECTED\",\n        \"appliedDate\": \"2024-01-05\",\n        \"notes\": \"Not a fit\",\n        \"salaryRange\": \"$150k-$200k\",\n        \"location\": \"Los Gatos\"\n    },\n    {\n        \"id\": 5,\n        \"company\": \"Meta\",\n        \"position\": \"Full Stack Developer\",\n        \"status\": \"APPLIED\",\n        \"appliedDate\": \"2024-01-22\",\n        \"notes\": \"Just applied\",\n        \"salaryRange\": \"$125k-$165k\",\n        \"location\": \"Menlo Park\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get_One_Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/jobs/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jobs",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get_One_Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/jobs/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"jobs",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Apr 2026 21:04:08 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"company\": \"Google\",\n    \"position\": \"Software Engineer\",\n    \"status\": \"INTERVIEW\",\n    \"appliedDate\": \"2024-01-15\",\n    \"notes\": \"Phone screen done\",\n    \"salaryRange\": \"$120k-$160k\",\n    \"location\": \"Remote\"\n}"
+				}
+			]
+		},
+		{
+			"name": "getting_By_Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/jobs/status/INTERVIEW",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jobs",
+						"status",
+						"INTERVIEW"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getting_By_Status",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/jobs/status/INTERVIEW",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"jobs",
+								"status",
+								"INTERVIEW"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Apr 2026 21:07:38 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"company\": \"Google\",\n        \"position\": \"Software Engineer\",\n        \"status\": \"INTERVIEW\",\n        \"appliedDate\": \"2024-01-15\",\n        \"notes\": \"Phone screen done\",\n        \"salaryRange\": \"$120k-$160k\",\n        \"location\": \"Remote\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Getting_Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/jobs/search?keyword=engineer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jobs",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "engineer"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Getting_Search",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/jobs/search?keyword=engineer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"jobs",
+								"search"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "engineer"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Apr 2026 21:08:08 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"company\": \"Google\",\n        \"position\": \"Software Engineer\",\n        \"status\": \"INTERVIEW\",\n        \"appliedDate\": \"2024-01-15\",\n        \"notes\": \"Phone screen done\",\n        \"salaryRange\": \"$120k-$160k\",\n        \"location\": \"Remote\"\n    },\n    {\n        \"id\": 4,\n        \"company\": \"Netflix\",\n        \"position\": \"Senior Software Engineer\",\n        \"status\": \"REJECTED\",\n        \"appliedDate\": \"2024-01-05\",\n        \"notes\": \"Not a fit\",\n        \"salaryRange\": \"$150k-$200k\",\n        \"location\": \"Los Gatos\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "STATUS SUMMARY",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/jobs/summary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jobs",
+						"summary"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "STATUS SUMMARY",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/jobs/summary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"jobs",
+								"summary"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Apr 2026 21:09:14 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"INTERVIEW\": 1,\n    \"APPLIED\": 2,\n    \"OFFER\": 1,\n    \"REJECTED\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/api/jobs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"company\":\"Apple\",\"position\":\"iOS Engineer\",\"status\":\"APPLIED\",\n       \"appliedDate\":\"2024-01-25\",\"notes\":\"Dream job!\",\"salaryRange\":\"$140k\",\"location\":\"Cupertino\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jobs"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post_Create_Application",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"company\":\"Apple\",\"position\":\"iOS Engineer\",\"status\":\"APPLIED\",\n       \"appliedDate\":\"2024-01-25\",\"notes\":\"Dream job!\",\"salaryRange\":\"$140k\",\"location\":\"Cupertino\"}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/jobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"jobs"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Apr 2026 21:12:12 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 6,\n    \"company\": \"Apple\",\n    \"position\": \"iOS Engineer\",\n    \"status\": \"APPLIED\",\n    \"appliedDate\": \"2024-01-25\",\n    \"notes\": \"Dream job!\",\n    \"salaryRange\": \"$140k\",\n    \"location\": \"Cupertino\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update_Job_Application",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"company\":\"Apple\",\"position\":\"iOS Engineer\",\"status\":\"INTERVIEW\",\n       \"appliedDate\":\"2024-01-25\",\"notes\":\"Got a call!\",\"salaryRange\":\"$140k\",\"location\":\"Cupertino\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/jobs/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jobs",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update_Job_Application",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"company\":\"Apple\",\"position\":\"iOS Engineer\",\"status\":\"INTERVIEW\",\n       \"appliedDate\":\"2024-01-25\",\"notes\":\"Got a call!\",\"salaryRange\":\"$140k\",\"location\":\"Cupertino\"}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/jobs/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"jobs",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Apr 2026 21:13:02 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"company\": \"Apple\",\n    \"position\": \"iOS Engineer\",\n    \"status\": \"INTERVIEW\",\n    \"appliedDate\": \"2024-01-25\",\n    \"notes\": \"Got a call!\",\n    \"salaryRange\": \"$140k\",\n    \"location\": \"Cupertino\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete_application",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/jobs/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jobs",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete_application",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/jobs/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"jobs",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Apr 2026 21:16:16 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Job application deleted successfully\"\n}"
+				}
+			]
+		}
+	]
+}
